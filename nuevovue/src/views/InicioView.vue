@@ -4,7 +4,7 @@
   <hola-mundo-comp></hola-mundo-comp>
   <lista-foros></lista-foros>
   <form-foro></form-foro>
-  <Lista-Subject></Lista-Subject>>
+  <Lista-Subject></Lista-Subject>
   </div>
 </template>
 
@@ -18,7 +18,7 @@ import ListaSubject from "../components/ListaSubject";
 
 export default {
   name: "InicioView",
-  components: { HolaMundoComp, ListaForos, FormForo },
+  components: { HolaMundoComp, ListaForos, FormForo, ListaSubject },
     
 };
 </script>
