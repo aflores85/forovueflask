@@ -1,16 +1,16 @@
 <template>
   <div>
-    <form @submit.prevent="sendForo">
+    <form @submit.prevent="sendSubject">
       <input type="text" v-model="title" />
       <input type="text" v-model="content" />
-      <button type="submit">Nuevo Foro</button>
+      <button type="submit">Nuevo Subject</button>
     </form>
   </div>
 </template>
 
 <script>
 export default {
-  name: "formForo",
+  name: "FormSubject",
   data() {
     return {
       title: "",
@@ -18,8 +18,8 @@ export default {
     };
   },
   methods: {
-    sendForo() {
-      fetch("http://localhost:5000/api/v1/newforo", {
+    sendSubject() {
+      fetch("http://localhost:5000/api/v1/newsubject", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,6 +27,7 @@ export default {
         body: JSON.stringify({
           title: this.title,
           content: this.content,
+          foro:this.foro
         }),
       })
         .then((response) => response.json())
