@@ -124,3 +124,10 @@ o
 
 ### Desactivar 
 ```deactivate```
+
+export FLASK_APP=app
+flask run
+
+crear proyecto VUE
+$ winpty vue.cmd create `<project-name>`
+npm run verve
